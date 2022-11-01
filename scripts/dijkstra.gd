@@ -30,7 +30,7 @@ func _ready():
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	board = rng.randi_range(0, 1)
+	board = rng.randi_range(0, 2)
 	
 	if board == 0:
 		correct_button_sequence = [0, 2, 1, 3, 5]	
@@ -44,7 +44,7 @@ func _ready():
 		labels[7].text = "4"
 		labels[8].text = "7"
 		
-	else:
+	elif board == 1:
 		correct_button_sequence = [0, 1, 3, 4, 5]
 		labels[0].text = "2"
 		labels[1].text = "4"
@@ -55,6 +55,18 @@ func _ready():
 		labels[6].text = "4"
 		labels[7].text = "9"
 		labels[8].text = "4"
+	
+	else:
+		correct_button_sequence = [0, 2, 3, 5]
+		labels[0].text = "1"
+		labels[1].text = "2"
+		labels[2].text = "1"
+		labels[3].text = "4"
+		labels[4].text = "2"
+		labels[5].text = "7"
+		labels[6].text = "4"
+		labels[7].text = "6"
+		labels[8].text = "3"
 	
 	print(correct_button_sequence)
 	
