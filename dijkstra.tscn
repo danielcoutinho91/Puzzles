@@ -1,0 +1,145 @@
+[gd_scene format=2]
+
+[node name="dijkstra" type="Node2D"]
+
+[node name="Button0" type="Button" parent="."]
+margin_left = 66.0
+margin_top = 267.0
+margin_right = 163.0
+margin_bottom = 366.0
+
+[node name="Button1" type="Button" parent="."]
+margin_left = 327.0
+margin_top = 104.0
+margin_right = 424.0
+margin_bottom = 203.0
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 327.0
+margin_top = 454.0
+margin_right = 424.0
+margin_bottom = 553.0
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 622.0
+margin_top = 107.0
+margin_right = 719.0
+margin_bottom = 206.0
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 635.0
+margin_top = 462.0
+margin_right = 732.0
+margin_bottom = 561.0
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 866.0
+margin_top = 273.0
+margin_right = 963.0
+margin_bottom = 372.0
+
+[node name="Line2D0" type="Line2D" parent="."]
+position = Vector2( -2, 63 )
+points = PoolVector2Array( 170, 203, 324, 143, 294, 142 )
+
+[node name="Line2D1" type="Line2D" parent="."]
+position = Vector2( 5, 250 )
+points = PoolVector2Array( 163, 119, 317, 204, 303, 180 )
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2( 274, -22 )
+points = PoolVector2Array( 153, 174, 342, 174, 316, 160 )
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2( 254, 308 )
+points = PoolVector2Array( 174, 199, 373, 199, 343, 180 )
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2( 548, 54 )
+points = PoolVector2Array( 177, 154, 311, 217, 295, 187 )
+
+[node name="Line2D5" type="Line2D" parent="."]
+position = Vector2( 556, 214 )
+points = PoolVector2Array( 180, 246, 306, 162, 272, 165 )
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2( 114, 100 )
+points = PoolVector2Array( 261, 350, 261, 109, 245, 134 )
+
+[node name="Line2D7" type="Line2D" parent="."]
+position = Vector2( 278, 70 )
+points = PoolVector2Array( 149, 384, 342, 141, 312, 150 )
+
+[node name="Line2D8" type="Line2D" parent="."]
+position = Vector2( 451, 126 )
+points = PoolVector2Array( 244, 300, 228, 329, 228, 86 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 217.0
+margin_top = 33.0
+margin_right = 869.0
+margin_bottom = 67.0
+text = "CLIQUE NOS BOTÕES NA MESMA SEQUÊNCIA DO CAMINHO SOLUÇÃO DO ALGORITMO DE DIJKSTRA."
+
+[node name="Label0" type="Label" parent="."]
+margin_left = 221.0
+margin_top = 217.0
+margin_right = 246.0
+margin_bottom = 239.0
+text = "9"
+
+[node name="Label1" type="Label" parent="."]
+margin_left = 220.0
+margin_top = 418.0
+margin_right = 245.0
+margin_bottom = 440.0
+text = "9"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 351.0
+margin_top = 320.0
+margin_right = 376.0
+margin_bottom = 342.0
+text = "9"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 507.0
+margin_top = 129.0
+margin_right = 532.0
+margin_bottom = 151.0
+text = "9"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 529.0
+margin_top = 338.0
+margin_right = 554.0
+margin_bottom = 360.0
+text = "9"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 515.0
+margin_top = 521.0
+margin_right = 540.0
+margin_bottom = 543.0
+text = "9"
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 690.0
+margin_top = 317.0
+margin_right = 715.0
+margin_bottom = 339.0
+text = "9"
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 784.0
+margin_top = 213.0
+margin_right = 809.0
+margin_bottom = 235.0
+text = "9"
+
+[node name="Label8" type="Label" parent="."]
+margin_left = 805.0
+margin_top = 424.0
+margin_right = 830.0
+margin_bottom = 446.0
+text = "9"
