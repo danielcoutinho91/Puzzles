@@ -7,6 +7,7 @@ var correct_button_sequence = []
 var next_correct_button = 0
 var index = 0
 var board = 0
+var game_started = 0
 
 func _ready():
 	buttons.append($Button0)
@@ -18,6 +19,9 @@ func _ready():
 	
 	for i in buttons.size():
 		buttons[i].connect("pressed", self, "buttons_answer", [buttons[i]])
+		buttons[i].disabled = true
+	
+	buttons[0].disabled = false
 	
 	labels.append($Label0)
 	labels.append($Label1)
@@ -52,6 +56,11 @@ func _ready():
 func buttons_answer(button) -> void:	
 	next_correct_button = correct_button_sequence[index]
 	index+= 1
+	
+	if (game_started == 0):
+		for b in buttons:
+			b.disabled = false
+			game_started = 1
 	
 	if button.get_name() != buttons[next_correct_button].get_name():
 		print("PERDEU")
