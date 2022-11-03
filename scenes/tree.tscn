@@ -1,0 +1,127 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/tree.gd" type="Script" id=1]
+
+[node name="tree" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 163.0
+margin_top = 19.0
+margin_right = 891.0
+margin_bottom = 85.0
+
+[node name="Button0" type="Button" parent="."]
+margin_left = 494.0
+margin_top = 103.0
+margin_right = 539.0
+margin_bottom = 145.0
+
+[node name="Button1" type="Button" parent="."]
+margin_left = 254.0
+margin_top = 240.0
+margin_right = 299.0
+margin_bottom = 282.0
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 751.0
+margin_top = 240.0
+margin_right = 796.0
+margin_bottom = 282.0
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 102.0
+margin_top = 363.0
+margin_right = 147.0
+margin_bottom = 405.0
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 415.0
+margin_top = 363.0
+margin_right = 460.0
+margin_bottom = 405.0
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 659.0
+margin_top = 365.0
+margin_right = 704.0
+margin_bottom = 407.0
+
+[node name="Button6" type="Button" parent="."]
+margin_left = 845.0
+margin_top = 365.0
+margin_right = 890.0
+margin_bottom = 407.0
+
+[node name="Button7" type="Button" parent="."]
+margin_left = 28.0
+margin_top = 504.0
+margin_right = 73.0
+margin_bottom = 546.0
+
+[node name="Button8" type="Button" parent="."]
+margin_left = 173.0
+margin_top = 504.0
+margin_right = 218.0
+margin_bottom = 546.0
+
+[node name="Button9" type="Button" parent="."]
+margin_left = 327.0
+margin_top = 507.0
+margin_right = 372.0
+margin_bottom = 549.0
+
+[node name="Button10" type="Button" parent="."]
+margin_left = 495.0
+margin_top = 509.0
+margin_right = 540.0
+margin_bottom = 551.0
+
+[node name="Button11" type="Button" parent="."]
+margin_left = 942.0
+margin_top = 510.0
+margin_right = 987.0
+margin_bottom = 552.0
+
+[node name="Line2D0" type="Line2D" parent="."]
+points = PoolVector2Array( 492, 146, 300, 240 )
+
+[node name="Line2D1" type="Line2D" parent="."]
+position = Vector2( -151, 123 )
+points = PoolVector2Array( 404, 161, 299, 240 )
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2( -303, 245 )
+points = PoolVector2Array( 404, 162, 377, 258 )
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2( -202, 244 )
+points = PoolVector2Array( 350, 162, 374, 259 )
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2( -48, 122 )
+points = PoolVector2Array( 349, 161, 461, 241 )
+
+[node name="Line2D5" type="Line2D" parent="."]
+position = Vector2( -55, 257 )
+points = PoolVector2Array( 469, 148, 429, 247 )
+
+[node name="Line2D6" type="Line2D" parent="."]
+position = Vector2( 62, 260 )
+points = PoolVector2Array( 401, 147, 433, 247 )
+
+[node name="Line2D7" type="Line2D" parent="."]
+position = Vector2( 143, -1 )
+points = PoolVector2Array( 399, 148, 604, 240 )
+
+[node name="Line2D8" type="Line2D" parent="."]
+position = Vector2( 173, 221 )
+points = PoolVector2Array( 576, 62, 533, 142 )
+
+[node name="Line2D9" type="Line2D" parent="."]
+position = Vector2( 311, 220 )
+points = PoolVector2Array( 487, 63, 533, 143 )
+
+[node name="Line2D10" type="Line2D" parent="."]
+position = Vector2( 434, 365 )
+points = PoolVector2Array( 458, 43, 507, 143 )

@@ -1,8 +1,6 @@
 extends Node2D
 
 var buttons = []
-var labels = []
-var labels_values = []
 var correct_button_sequence = []
 var next_correct_button = 0
 var index = 0
@@ -15,40 +13,32 @@ func _ready():
 	buttons.append($Button3)
 	buttons.append($Button4)
 	buttons.append($Button5)
+	buttons.append($Button6)
+	buttons.append($Button7)
+	buttons.append($Button8)
+	buttons.append($Button9)
+	buttons.append($Button10)
+	buttons.append($Button11)
 	
 	for i in buttons.size():
 		buttons[i].connect("pressed", self, "buttons_answer", [buttons[i]])
-	
-	labels.append($Label0)
-	labels.append($Label1)
-	labels.append($Label2)
-	labels.append($Label3)
-	labels.append($Label4)
-	labels.append($Label5)
-	labels.append($Label6)
-	labels.append($Label7)
-	labels.append($Label8)
-	
+
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	board = rng.randi_range(0, 2)
 	
 	if board == 0:
-		correct_button_sequence = [0, 2, 1, 3, 5]
-		labels_values = ["9", "5", "3", "1", "8", "2", "4", "4", "7"]
+		$RichTextLabel.text = "Percorra a árvore de busca binária PRÉ-ORDEM"
+		correct_button_sequence = [0, 1, 3, 7, 8, 4, 9, 10, 2, 5, 6, 11]
 		
 	elif board == 1:
-		correct_button_sequence = [0, 1, 3, 4, 5]
-		labels_values = ["2", "4", "1", "3", "2", "6", "4", "9", "4"]
+		$RichTextLabel.text = "Percorra a árvore de busca binária EM-ORDEM"
+		correct_button_sequence = [7, 3, 8, 1, 9, 4, 10, 0, 5, 2, 6, 11]
 	
 	else:
-		correct_button_sequence = [0, 2, 3, 5]
-		labels_values = ["1", "2", "1", "4", "2", "7", "4", "6", "3"]
-		
-	for i in labels.size():
-		labels[i].text = labels_values[i]
-			
-
+		$RichTextLabel.text = "Percorra a árvore de busca binária PÓS-ORDEM"
+		correct_button_sequence = [7, 8, 3, 9, 10, 4, 1, 5, 11, 6, 2, 0]
+	
 func buttons_answer(button) -> void:	
 	next_correct_button = correct_button_sequence[index]
 	index+= 1
