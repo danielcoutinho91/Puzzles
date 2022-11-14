@@ -9,7 +9,7 @@ var index = 0
 var board = 0
 var game_started = 0
 
-signal finalJogo(retorno)
+#signal finalJogo(retorno)
 
 func _ready():
 	buttons.append($Button0)
@@ -55,8 +55,7 @@ func _ready():
 		labels[i].text = labels_values[i]
 			
 
-func buttons_answer(button) -> void:
-	emit_signal("finalJogo", true)	
+func buttons_answer(button) -> void:	
 	next_correct_button = correct_button_sequence[index]
 	index+= 1
 	
@@ -70,6 +69,7 @@ func buttons_answer(button) -> void:
 		button.modulate = Color('#FF2400')
 		for b in buttons:
 			b.disabled = true
+		#emit_signal("finalJogo", false)	
 	else:
 		button.modulate = Color('#00FF7F')
 		button.disabled = true
@@ -78,3 +78,4 @@ func buttons_answer(button) -> void:
 			print("VENCEU")
 			for b in buttons:
 				b.disabled = true
+			#emit_signal("finalJogo", true)	
