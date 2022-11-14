@@ -9,6 +9,8 @@ var index = 0
 var board = 0
 var game_started = 0
 
+signal finalJogo(retorno)
+
 func _ready():
 	buttons.append($Button0)
 	buttons.append($Button1)
@@ -53,7 +55,8 @@ func _ready():
 		labels[i].text = labels_values[i]
 			
 
-func buttons_answer(button) -> void:	
+func buttons_answer(button) -> void:
+	emit_signal("finalJogo", true)	
 	next_correct_button = correct_button_sequence[index]
 	index+= 1
 	
