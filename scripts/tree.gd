@@ -29,30 +29,30 @@ func _ready():
 	
 	if board == 0:
 		$RichTextLabel.text = "Percorra a árvore de busca binária PRÉ-ORDEM"
-		correct_button_sequence = [0, 1, 3, 7, 8, 4, 9, 10, 2, 5, 6, 11]
+		correct_button_sequence = [0, 1, 3, 7, 8, 4, 9, 2, 5, 10, 6, 11]
 		
 	elif board == 1:
 		$RichTextLabel.text = "Percorra a árvore de busca binária EM-ORDEM"
-		correct_button_sequence = [7, 3, 8, 1, 9, 4, 10, 0, 5, 2, 6, 11]
+		correct_button_sequence = [7, 3, 8, 1, 4, 9, 0, 10, 5, 2, 6, 11]
 	
 	else:
 		$RichTextLabel.text = "Percorra a árvore de busca binária PÓS-ORDEM"
-		correct_button_sequence = [7, 8, 3, 9, 10, 4, 1, 5, 11, 6, 2, 0]
+		correct_button_sequence = [7, 8, 3, 9, 4, 1, 10, 5, 11, 6, 2, 0]
 	
 func buttons_answer(button) -> void:	
 	next_correct_button = correct_button_sequence[index]
 	index+= 1
 	
 	if button.get_name() != buttons[next_correct_button].get_name():
-		print("PERDEU")
 		button.modulate = Color('#FF2400')
 		for b in buttons:
 			b.disabled = true
+		print("PERDEU")
 	else:
 		button.modulate = Color('#00FF7F')
 		button.disabled = true
 	
 		if correct_button_sequence.size() == index:
-			print("VENCEU")
 			for b in buttons:
 				b.disabled = true
+			print("VENCEU")

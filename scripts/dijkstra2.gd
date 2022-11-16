@@ -18,42 +18,30 @@ func _ready():
 	buttons.append($Button3)
 	buttons.append($Button4)
 	buttons.append($Button5)
+	buttons.append($Button6)
+	buttons.append($Button7)
+	buttons.append($Button8)
+	buttons.append($Button9)
 	
 	for i in buttons.size():
 		buttons[i].connect("pressed", self, "buttons_answer", [buttons[i]])
 		buttons[i].disabled = true
 	
-	buttons[0].disabled = false
-	
-	labels.append($Label0)
-	labels.append($Label1)
-	labels.append($Label2)
-	labels.append($Label3)
-	labels.append($Label4)
-	labels.append($Label5)
-	labels.append($Label6)
-	labels.append($Label7)
-	labels.append($Label8)
-	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	board = rng.randi_range(0, 2)
+	board = rng.randi_range(0, 1)
 	
 	if board == 0:
-		correct_button_sequence = [0, 2, 1, 3, 5]
+		correct_button_sequence = [0, 3, 2, 6, 9]
 		labels_values = ["9", "5", "3", "1", "8", "2", "4", "4", "7"]
+		$RichTextLabel2.text = "Origem: INÍCIO ROTA ACESSÍVEL UNIFOR\nDestino: BLOCO K"
 		
 	elif board == 1:
-		correct_button_sequence = [0, 1, 3, 4, 5]
+		correct_button_sequence = [9, 7, 5, 3, 0]
 		labels_values = ["2", "4", "1", "3", "2", "6", "4", "9", "4"]
+		$RichTextLabel2.text = "Origem: BLOCO K\nDestino: INÍCIO ROTA ACESSÍVEL"
 	
-	else:
-		correct_button_sequence = [0, 2, 3, 5]
-		labels_values = ["1", "2", "1", "4", "2", "7", "4", "6", "3"]
-		
-	for i in labels.size():
-		labels[i].text = labels_values[i]
-			
+	buttons[correct_button_sequence[0]].disabled = false
 
 func buttons_answer(button) -> void:	
 	next_correct_button = correct_button_sequence[index]
