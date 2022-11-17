@@ -74,14 +74,19 @@ func buttons_answer(button) -> void:
 	
 	if facts_dict[button.text] != next_correct_date:
 		button.modulate = Color('#FF2400')
-		button.text = str(next_correct_date, " - ", button.text)
+		button.text = str(facts_dict[button.text], " - ", button.text)
+		button.disabled = true
+		
 		for b in buttons:
+			if b.disabled == false:
+				b.text = str(facts_dict[b.text], " - ", b.text)
 			b.disabled = true
+			
 		print("PERDEU")
 		#emit_signal("finalJogo", false)	
 	else:
 		button.modulate = Color('#00FF7F')
-		button.text = str(next_correct_date, " - ", button.text)
+		button.text = str(facts_dict[button.text], " - ", button.text)
 		button.disabled = true
 	
 		if correct_dates_sequence.size() == index:
