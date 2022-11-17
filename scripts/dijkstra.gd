@@ -23,9 +23,28 @@ func _ready():
 	buttons.append($Button8)
 	buttons.append($Button9)
 	
+	labels.append($Label1)
+	labels.append($Label2)
+	labels.append($Label3)
+	labels.append($Label4)
+	labels.append($Label5)
+	labels.append($Label6)
+	labels.append($Label7)
+	labels.append($Label8)
+	labels.append($Label9)
+	labels.append($Label10)
+	labels.append($Label11)
+	labels.append($Label12)
+	labels.append($Label13)
+	labels.append($Label14)
+	labels.append($Label15)
+	labels.append($Label16)
+	labels.append($Label17)
+	labels.append($Label18)
+	
 	for i in buttons.size():
 		buttons[i].connect("pressed", self, "buttons_answer", [buttons[i]])
-		buttons[i].disabled = true
+		buttons[i].disabled = true	
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -33,14 +52,18 @@ func _ready():
 	
 	if board == 0:
 		correct_button_sequence = [0, 3, 2, 6, 9]
-		labels_values = ["9", "5", "3", "1", "8", "2", "4", "4", "7"]
+		labels_values = ["85s", "3m", "2m", "2m", "20s", "90s", "90s", "2m", "3m", "3m", "60s", "2m", "2m", "1m", "30s", "2m", "1m", "40s"]
 		$RichTextLabel2.text = "Origem: INÍCIO ROTA ACESSÍVEL UNIFOR\nDestino: BLOCO K"
 		
 	elif board == 1:
 		correct_button_sequence = [9, 7, 5, 3, 0]
-		labels_values = ["2", "4", "1", "3", "2", "6", "4", "9", "4"]
+		labels_values = ["45s", "90s", "1m", "2m", "40s", "40s", "90s", "1m", "3m", "1m", "1m", "2m", "90s", "40s", "35s", "30s", "1m", "20s"]
 		$RichTextLabel2.text = "Origem: BLOCO K\nDestino: INÍCIO ROTA ACESSÍVEL"
+		
+	for i in labels_values.size():
+		labels[i].text = labels_values[i]
 	
+	buttons[correct_button_sequence.back()].modulate = Color("#FFFF00")
 	buttons[correct_button_sequence[0]].disabled = false
 
 func buttons_answer(button) -> void:	
