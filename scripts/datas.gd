@@ -12,6 +12,8 @@ var dates = []
 var dates_selected = []
 var index = 0
 
+signal end_game(value)
+
 var facts_dict = {
 	"Criação da primeira CALCULADORA por Blaise Pascal": 1642, 
 	"Criação da CALCULADORA de Leibniz": 1671, 
@@ -83,7 +85,7 @@ func buttons_answer(button) -> void:
 			b.disabled = true
 			
 		print("PERDEU")
-		#emit_signal("finalJogo", false)	
+		emit_signal("end_game", false)
 	else:
 		button.modulate = Color('#00FF7F')
 		button.text = str(facts_dict[button.text], " - ", button.text)
@@ -93,7 +95,7 @@ func buttons_answer(button) -> void:
 			for b in buttons:
 				b.disabled = true
 			print("VENCEU")
-			#emit_signal("finalJogo", true)	
+			emit_signal("end_game", true)
 	
 	
 
