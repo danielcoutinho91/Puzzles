@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/datas.gd" type="Script" id=1]
+[ext_resource path="res://assets/sound_victory.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/sound_correct.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound_wrong.mp3" type="AudioStream" id=4]
 
 [node name="datas" type="Node2D"]
 script = ExtResource( 1 )
@@ -39,3 +42,12 @@ margin_top = 40.0
 margin_right = 877.0
 margin_bottom = 93.0
 text = "CLIQUE NO FATOS HISTÓRICOS DA COMPUTAÇÃO ORDENANDO DO MAIS ANTIGO AO MAIS RECENTE"
+
+[node name="SoundCorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="SoundWrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="SoundVictory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

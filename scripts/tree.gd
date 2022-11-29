@@ -50,6 +50,7 @@ func buttons_answer(button) -> void:
 		for b in buttons:
 			b.disabled = true
 		print("PERDEU")
+		$SoundWrong.play()
 		emit_signal("end_game", false)	
 	else:
 		button.modulate = Color('#00FF7F')
@@ -59,4 +60,7 @@ func buttons_answer(button) -> void:
 			for b in buttons:
 				b.disabled = true
 			print("VENCEU")
+			$SoundVictory.play()
 			emit_signal("end_game", true)
+		else:
+			$SoundCorrect.play()
