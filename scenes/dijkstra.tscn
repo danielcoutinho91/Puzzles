@@ -1,10 +1,22 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/dijkstra.gd" type="Script" id=1]
 [ext_resource path="res://assets/mapa unifor.png" type="Texture" id=2]
 [ext_resource path="res://assets/sound_correct.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/sound_victory.mp3" type="AudioStream" id=4]
 [ext_resource path="res://assets/sound_wrong.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/circuit_bg_blue.jpg" type="Texture" id=6]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=11]
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=12]
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0.129412, 0, 1 )
@@ -51,20 +63,31 @@ corner_radius_bottom_left = 100
 [node name="dijkstra" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 141.0
-margin_top = 10.0
-margin_right = 915.0
-margin_bottom = 68.0
-text = "O VALOR EM CADA TRAJETO INDICA O TEMPO NECESSÁRIO PARA SE DESLOCAR DE UM LOCAL PARA O OUTRO.
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 1026.0
+margin_bottom = 600.0
+texture = ExtResource( 6 )
+expand = true
 
-CLIQUE NOS BOTÕES NA MESMA SEQUÊNCIA DO CAMINHO SOLUÇÃO DO ALGORITMO DE DIJKSTRA."
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 105.0
+margin_top = 13.0
+margin_right = 924.0
+margin_bottom = 54.0
+custom_fonts/normal_font = SubResource( 11 )
+text = " O VALOR EM CADA TRAJETO INDICA O TEMPO NECESSÁRIO PARA SE DESLOCAR DE UM LOCAL PARA O OUTRO.
+ CLIQUE NOS BOTÕES NA MESMA SEQUÊNCIA DO CAMINHO SOLUÇÃO DO ALGORITMO DE DIJKSTRA."
+scroll_active = false
+deselect_on_focus_loss_enabled = false
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 margin_left = 140.0
-margin_top = 68.0
+margin_top = 60.0
 margin_right = 914.0
-margin_bottom = 99.0
+margin_bottom = 106.0
+custom_fonts/normal_font = SubResource( 12 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 140.0

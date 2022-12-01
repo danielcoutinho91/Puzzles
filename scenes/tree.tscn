@@ -1,9 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/tree.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound_victory.mp3" type="AudioStream" id=2]
 [ext_resource path="res://assets/sound_correct.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/sound_wrong.mp3" type="AudioStream" id=4]
+[ext_resource path="res://assets/circuit_bg_white.jpg" type="Texture" id=5]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.847059, 0.847059, 0, 1 )
@@ -43,11 +51,22 @@ corner_radius_bottom_left = 100
 [node name="tree" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -2.0
+margin_top = -1.0
+margin_right = 1022.0
+margin_bottom = 1023.0
+texture = ExtResource( 5 )
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 163.0
-margin_top = 19.0
-margin_right = 891.0
-margin_bottom = 85.0
+margin_left = 50.0
+margin_top = 25.0
+margin_right = 957.0
+margin_bottom = 72.0
+custom_fonts/normal_font = SubResource( 6 )
+text = "teste teste teste teste teste"
+scroll_active = false
+deselect_on_focus_loss_enabled = false
 
 [node name="Button0" type="Button" parent="."]
 margin_left = 492.0
@@ -183,47 +202,47 @@ custom_styles/normal = SubResource( 2 )
 
 [node name="Line2D0" type="Line2D" parent="."]
 position = Vector2( -1, 0 )
-points = PoolVector2Array( 517, 159, 517, 183, 279, 216, 279, 237 )
+points = PoolVector2Array( 517, 158, 517, 183, 279, 216, 279, 238 )
 
 [node name="Line2D1" type="Line2D" parent="."]
 position = Vector2( -151, 123 )
-points = PoolVector2Array( 429, 166, 429, 182, 276, 222, 276, 235 )
+points = PoolVector2Array( 429, 165, 429, 182, 276, 222, 276, 236 )
 
 [node name="Line2D2" type="Line2D" parent="."]
 position = Vector2( -302, 245 )
-points = PoolVector2Array( 427, 165, 427, 185, 369, 233, 369, 256 )
+points = PoolVector2Array( 427, 164, 427, 185, 369, 233, 369, 258 )
 
 [node name="Line2D3" type="Line2D" parent="."]
 position = Vector2( -202, 244 )
-points = PoolVector2Array( 327, 169, 327, 184, 382, 235, 382, 258 )
+points = PoolVector2Array( 327, 169, 327, 184, 382, 235, 382, 259 )
 
 [node name="Line2D4" type="Line2D" parent="."]
 position = Vector2( -48, 123 )
-points = PoolVector2Array( 326, 168, 326, 182, 487, 222, 487, 234 )
+points = PoolVector2Array( 326, 168, 326, 182, 487, 222, 487, 235 )
 
 [node name="Line2D5" type="Line2D" parent="."]
 position = Vector2( 200, 262 )
-points = PoolVector2Array( 495, 152, 495, 174, 420, 222, 420, 246 )
+points = PoolVector2Array( 495, 151, 495, 174, 420, 222, 420, 247 )
 
 [node name="Line2D6" type="Line2D" parent="."]
 position = Vector2( 62, 260 )
-points = PoolVector2Array( 378, 150, 378, 171, 448, 219, 448, 249 )
+points = PoolVector2Array( 378, 148, 378, 171, 448, 219, 448, 251 )
 
 [node name="Line2D7" type="Line2D" parent="."]
 position = Vector2( 143, -2 )
-points = PoolVector2Array( 373, 163, 373, 184, 630, 223, 630, 242 )
+points = PoolVector2Array( 373, 163, 373, 184, 630, 223, 630, 243 )
 
 [node name="Line2D8" type="Line2D" parent="."]
 position = Vector2( 173, 221 )
-points = PoolVector2Array( 600, 71, 600, 93, 521, 123, 521, 140 )
+points = PoolVector2Array( 600, 70, 600, 93, 521, 123, 521, 142 )
 
 [node name="Line2D9" type="Line2D" parent="."]
 position = Vector2( 311, 220 )
-points = PoolVector2Array( 462, 75, 462, 95, 546, 125, 546, 141 )
+points = PoolVector2Array( 462, 75, 462, 95, 546, 125, 546, 143 )
 
 [node name="Line2D10" type="Line2D" parent="."]
 position = Vector2( 434, 365 )
-points = PoolVector2Array( 423, 49, 423, 69, 519, 120, 519, 141 )
+points = PoolVector2Array( 423, 48, 423, 69, 519, 120, 519, 142 )
 
 [node name="SoundCorrect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

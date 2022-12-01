@@ -53,17 +53,17 @@ func _ready():
 	if board == 0:
 		correct_button_sequence = [0, 3, 2, 6, 9]
 		labels_values = ["40s", "3m", "2m", "3m", "50s", "90s", "90s", "2m", "2m", "3m", "90s", "2m", "2m", "1m", "30s", "2m", "1m", "40s"]
-		$RichTextLabel2.text = "Origem: INÍCIO ROTA ACESSÍVEL UNIFOR\nDestino: BLOCO K"
+		$RichTextLabel2.text = " Origem: INÍCIO ROTA ACESSÍVEL UNIFOR\n Destino: BLOCO K"
 		
 	elif board == 1:
 		correct_button_sequence = [9, 7, 5, 3, 0]
 		labels_values = ["45s", "90s", "1m", "2m", "40s", "40s", "90s", "1m", "3m", "1m", "1m", "2m", "90s", "40s", "35s", "30s", "1m", "20s"]
-		$RichTextLabel2.text = "Origem: BLOCO K\nDestino: INÍCIO ROTA ACESSÍVEL"
+		$RichTextLabel2.text = " Origem: BLOCO K\n Destino: INÍCIO ROTA ACESSÍVEL"
 	
 	elif board == 2:
 		correct_button_sequence = [8, 5, 3, 2, 4]
 		labels_values = ["45s", "90s", "1m", "2m", "40s", "45s", "3m", "3m", "2m", "50s", "3m", "50s", "1m", "45s", "35s", "70s", "30s", "30s"]
-		$RichTextLabel2.text = "Origem: ALMOXARIFADO CENTRAL\nDestino: BIBLIOTECA CENTRAL"
+		$RichTextLabel2.text = " Origem: ALMOXARIFADO CENTRAL\n Destino: BIBLIOTECA CENTRAL"
 		
 	for i in labels_values.size():
 		labels[i].text = labels_values[i]
