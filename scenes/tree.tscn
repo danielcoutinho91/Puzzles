@@ -55,8 +55,9 @@ script = ExtResource( 1 )
 margin_left = -2.0
 margin_top = -1.0
 margin_right = 1022.0
-margin_bottom = 1023.0
+margin_bottom = 601.0
 texture = ExtResource( 5 )
+expand = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 50.0

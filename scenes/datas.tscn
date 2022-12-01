@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/datas.gd" type="Script" id=1]
 [ext_resource path="res://assets/sound_victory.mp3" type="AudioStream" id=2]
@@ -6,6 +6,30 @@
 [ext_resource path="res://assets/sound_wrong.mp3" type="AudioStream" id=4]
 [ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/circuit_bg_blue.jpg" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -25,32 +49,36 @@ texture = ExtResource( 6 )
 expand = true
 
 [node name="Button1" type="Button" parent="."]
-margin_left = 75.0
+margin_left = 10.0
 margin_top = 120.0
-margin_right = 955.0
+margin_right = 1010.0
 margin_bottom = 220.0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 75.0
+margin_left = 10.0
 margin_top = 240.0
-margin_right = 955.0
+margin_right = 1010.0
 margin_bottom = 340.0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 75.0
+margin_left = 10.0
 margin_top = 360.0
-margin_right = 955.0
+margin_right = 1010.0
 margin_bottom = 460.0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 75.0
+margin_left = 10.0
 margin_top = 480.0
-margin_right = 955.0
+margin_right = 1010.0
 margin_bottom = 580.0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 226.0
